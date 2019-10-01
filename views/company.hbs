@@ -1,0 +1,28 @@
+{{> header}}
+
+    <div class="container-fluid">
+        <br><br><div class="row">
+            <a href="/add" style="position: fixed;right:20px;top:20px;"><button type="button" class="btn btn-primary">Add an interview</button></a>
+            {{#each data}}
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <h5>{{this.time}}</h5>
+                            <h5> {{# if this.type}}Audio{{else}}Video{{/if}} Interview</h5>
+                            <ul class="list-group">
+                                {{#each this.candidates}}
+                                    <li class="list-group-item">{{this}}</li>
+                                <br>{{/each}}
+                            </ul>
+                            <br>
+                            <a href="/add?id={{this._id}}"><button type="button" class="btn btn-primary">Edit this interview</button>
+                            <br/><br><a href="/delete?id={{this._id}}"><button type="button" class="btn btn-primary">Delete this interview</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+{{> footer}}

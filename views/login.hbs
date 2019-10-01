@@ -1,0 +1,15 @@
+{{> header}}
+    <div class="container">
+        <h2>Login </h2>
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                    placeholder="Enter Company Name" name="name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br><br>
+        <a href="/"><button type="button" class="btn btn-primary">Register Instead?</button></a>
+    </div>
+{{> footer}}

@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
 
 var interview = new mongoose.Schema({
-	company:String,
+	name:String,
 	candidates: [String],
 	time: Date,
-	type: Integer
+	number: Number,
+	type: Number
 });
 
 module.exports = mongoose.model('interview',interview,'interview');
